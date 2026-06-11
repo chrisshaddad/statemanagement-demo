@@ -1,0 +1,216 @@
+/* Tiny shared CSS so every route looks IDENTICAL.
+   The comparison is about the code, not the styling. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1a1a2e;
+  background: #f5f5fa;
+}
+
+nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  background: #1a1a2e;
+}
+
+nav a {
+  color: #cfcfe8;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: #2a2a48;
+  color: #fff;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 32px 0 0;
+}
+
+/* The item-list feature — same markup/classes on every route. */
+button {
+  font-size: 14px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+.list {
+  margin: 28px 0;
+}
+
+/* The "write" side: type an item and add it. */
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.add-form input {
+  flex: 1;
+  font-size: 15px;
+  padding: 9px 12px;
+  border: 1px solid #c9c9de;
+  border-radius: 8px;
+}
+
+.count-badge {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+/* The "read" side: the list itself. */
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e0e0ee;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+
+.del {
+  background: transparent;
+  color: #b00020;
+  font-size: 18px;
+  padding: 2px 8px;
+}
+
+.del:hover {
+  background: #fdeaea;
+}
+
+.empty {
+  color: #999;
+  font-style: italic;
+}
+
+.note {
+  background: #fff;
+  border: 1px solid #e0e0ee;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.card {
+  display: block;
+  background: #fff;
+  border: 1px solid #e0e0ee;
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  border-color: #4f46e5;
+}
+
+.card strong {
+  color: #4f46e5;
+}
+
+.users {
+  list-style: none;
+  padding: 0;
+}
+
+.users li {
+  background: #fff;
+  border: 1px solid #e0e0ee;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+
+/* A labeled, teal button for the /redux thunk bonus — visually distinct from the
+   normal indigo buttons so it reads as an "extra," not part of the core UI. */
+.bonus {
+  background: #0d9488;
+}
+
+.bonus:hover {
+  background: #0f766e;
+}
+
+/* The /redux action-history (time-travel) panel. */
+.history {
+  margin-top: 12px;
+}
+
+.history ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+}
+
+.history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid #e0e0ee;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: #fff;
+}
+
+.history .jump {
+  background: #6b7280;
+  padding: 5px 12px;
+  font-family: system-ui, sans-serif;
+}
+
+.history .jump:hover {
+  background: #4b5563;
+}
